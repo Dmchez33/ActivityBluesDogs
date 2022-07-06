@@ -1,0 +1,6 @@
+Liste des etudiants par activité: 
+select a.id_Activite,a.date_Activite,a.intitule,a.annee,t.duree,t.nomType from activite as a,type as t where t.id_type = a.id_Activite;
+Ou encore
+select * from activite as a RIGHT JOIN type as t on a.id_Activite = t.id_Type;
+Recuperer la liste des participitants et apprenants par activité:
+select p.id_postulant, p.Nom, p.Prenom,p.type, a.intitule from activite as a RIGHT JOIN postulants as p on a.id_Activite = p.id_Postulant;
